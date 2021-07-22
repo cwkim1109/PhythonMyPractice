@@ -1,3 +1,5 @@
+# date: 2021/07/22
+
 # <<문자열>> --> 이걸로 행맨 만들어 봐야할듯
 
 # 문자열 안에 ' " 포함시키기
@@ -74,4 +76,40 @@ number = 10
 day = "three"
 print("I ate %d apples. And I was sick for %s days." %(number, day))
 
+# date: 2021/07/22
+
+# <포맷 코드와 숫자 함께 사용>
+# 1.정렬과 공백
+print("%10s" % "hi")
+print("%-10sjane." % 'hi')
+
+# 2.소수점 표현하기
+print("%0.4f" % 3.1453113)
+print("%10.4f" % 3.5253212)
+
+# <Format 함수를 사용한 포메팅>
+# 숫자 바로 대입
+print("I ate {0} apples".format(3))
+
+# 문자열 바로 대입
+word = "five"
+print("I ate {0} apples".format(word))
+
+# 숫자 값을 가진 변수로 대입
+number = 3
+print("I ate {0} apples".format(number))
+
+# 2개 이상 넣기
+number = 3
+word = "HAHA"
+print("I ate {0} burger. {1}!".format(number, word))
+
+# 이름으로 넣기
+print("안녕 나는 형이 {num}명있고 둘 다 {word}야".format(num = 2,word = "바보"))
+
+# 혼용해서 넣기
+print("안녕 나는 형이 {0}명있고 둘 다 {word}야".format(2,word = "바보"))
+
+# # 왼쪽 정렬
+# "{0<10}".format(("hi"))
 
