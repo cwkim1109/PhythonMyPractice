@@ -110,6 +110,86 @@ print("안녕 나는 형이 {num}명있고 둘 다 {word}야".format(num = 2,wor
 # 혼용해서 넣기
 print("안녕 나는 형이 {0}명있고 둘 다 {word}야".format(2,word = "바보"))
 
-# # 왼쪽 정렬
-# "{0<10}".format(("hi"))
+# 왼쪽 정렬
+print("{0:<10}".format(("hi")))
 
+# 오른쪽 정렬
+print("{0:>10}".format(("hi")))
+
+# 가운데 정렬
+print("{0:^10}".format(("hi")))
+
+# 공백 채우기
+print("{0:=^10}".format("hi"))
+print("{0:!<10}".format("hi"))
+
+# 소숫점 표현하기
+y = 3.146342
+print("{0:0.4f}".format(y))
+
+y = 3.146342
+print("{0:10.4f}".format(y))
+
+# { 또는 } 문자 표현하기
+print("{{ and }}".format())
+
+# < f 문자열 포매팅 >
+name = '홍길동'
+age = 30
+print(f'나의 이름은 {name}입니다. 나이는 {age}입니다')
+
+# 수식 추가 가능
+name = '홍길동'
+age = 30
+print(f'나의 이름은 {name}입니다. 나이는 {age+1}입니다')
+
+# < 문자열 관련 함수들 >
+
+# 문자 개수 세기(count)
+a = "bobby"
+print(a.count('b'))
+
+# 위치 알려주기1(find)
+a = "Python is the best choice"
+print(a.find("b")) #문자열 중 b가 처음 나온 위치를 반환
+print(a.find("k")) #찾는 문자나 문자열이 존재X --> -1 반환
+
+# 위치 알려주기2(index)
+a = "Life is too short"
+print(a.index('t')) #문자열 중 t가 처음 나온 위치를 반환
+print(a.index('k')) #찾는 문자나 문자열이 존재X --> 오류 발생
+
+# 문자열 삽입(join)
+print(",".join('abcd')) #문자열 각각의 문자사이에 ','를 삽입
+print(",".join(['a', 'b', 'c', 'd'])) #리스트나 튜플도 입력으로 사용할 수 있다
+
+# 소문자를 대문자로 바꾸기(upper)
+a = "hi"
+print(a.upper())
+
+# 대문자르 소문자로 바꾸기(lower)
+a = "HI"
+print(a.lower())
+
+# 왼쪽 공백 지우기(lstrip)
+a = " hi "
+print(a.lstrip())
+
+# 오른쪽 공백 지우기(rstrip)
+a = " hi "
+print(a.rstrip())
+
+# 양쪽 공백 지우기(strip)
+a = " hi "
+print(a.strip())
+
+# 문자열 바꾸기(replace)
+a = "Life is too short"
+print(a.replace("Life", "Your leg"))
+
+# 문자열 나누기(split)
+a = "Life is too short"
+print(a.split())
+
+b = "a:b:c:d"
+print(b.split((':'))) # ':'가 구분자가 되어 나누어줌
